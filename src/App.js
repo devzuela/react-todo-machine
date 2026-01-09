@@ -8,6 +8,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edita el archivo <code>src/App.js</code> y guarda para recargar.
+          Dennys Valenzuela
         </p>
         <a
           className="App-link"
