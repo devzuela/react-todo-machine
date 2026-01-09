@@ -1,6 +1,6 @@
 # 📋 Todo Machine - React Todo App
 
-Una aplicación moderna y funcional de gestión de tareas (Todo App) construida con **React.js**, desarrollada como parte del [Curso de Introducción a React.js](https://platzi.com/reactjs) de Platzi.
+Una aplicación moderna y funcional de gestión de tareas (Todo App) construida con **React.js**.
 
 ## 🚀 Demo en Vivo
 
@@ -143,8 +143,4 @@ La aplicación está configurada para desplegarse en GitHub Pages. El `homepage`
 
 ## 👨‍💻 Autor
 
-Desarrollado durante el Curso de Introducción a React.js de Platzi
-
----
-
-¡Mucha suerte aprendiendo React! #NuncaParesDeAprender
+Dennys Valenzuela, como parte del curso Platzi.
