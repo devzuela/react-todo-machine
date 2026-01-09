@@ -1,0 +1,33 @@
+.TodosError {
+  text-align: center;
+  padding: var(--spacing-xl);
+  color: #ff4757;
+  font-size: 18px;
+  font-weight: 500;
+  background: rgba(255, 71, 87, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 71, 87, 0.3);
+  border-radius: var(--radius-lg);
+  margin-top: var(--spacing-md);
+  animation: shake 0.5s ease;
+}
+
+.TodosError::before {
+  content: '⚠️';
+  display: block;
+  font-size: 48px;
+  margin-bottom: var(--spacing-md);
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-5px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(5px);
+  }
+}

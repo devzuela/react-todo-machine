@@ -1,24 +1,53 @@
 .TodoSearch {
-  background: #F9FBFC;
-  border-radius: 2px;
-  border: 2px solid #202329;
-  margin: 0 24px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: var(--radius-lg);
+  border: 2px solid var(--glass-border);
+  margin: 0 auto var(--spacing-lg);
+  padding: var(--spacing-md);
   height: 64px;
-  width: calc(100% - 62px);
-  font-size: 24px;
+  width: 100%;
+  max-width: 100%;
+  font-size: 18px;
   text-align: center;
-  font-family: 'Montserrat';
+  font-family: 'Inter', sans-serif;
   font-weight: 400;
-  color: #1E1E1F;
-  box-shadow: 0px 5px 50px rgba(32, 35, 41, 0.25);
+  color: var(--text-primary);
+  box-shadow: var(--glass-shadow);
+  transition: all var(--transition-normal);
+  animation: fadeIn 0.6s ease 0.2s backwards;
 }
 
 .TodoSearch::placeholder {
-  color: #A5A5A5;
-  font-family: 'Montserrat';
+  color: var(--text-muted);
+  font-family: 'Inter', sans-serif;
   font-weight: 400;
 }
 
 .TodoSearch:focus {
-  outline-color: #61DAFA;
+  outline: none;
+  border: 2px solid transparent;
+  background: var(--glass-bg);
+  background-clip: padding-box;
+  box-shadow: 
+    var(--glass-shadow),
+    0 0 0 2px var(--accent-cyan),
+    0 0 20px rgba(0, 212, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.TodoSearch:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }

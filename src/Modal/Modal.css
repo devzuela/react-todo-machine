@@ -1,12 +1,25 @@
 .ModalBackground {
-  background-color: rgba(32,35,41,.8);
+  background-color: rgba(15, 15, 35, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
+  z-index: 999;
+  animation: fadeInModal 0.3s ease;
+  padding: var(--spacing-md);
+}
+
+@keyframes fadeInModal {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

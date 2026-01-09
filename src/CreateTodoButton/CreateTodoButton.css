@@ -1,26 +1,59 @@
 .CreateTodoButton {
-  background-color: #61DAFA;
-  box-shadow: 0px 5px 25px rgba(97, 218, 250, 0.5);
+  background: var(--gradient-primary);
+  box-shadow: 
+    0 8px 32px rgba(102, 126, 234, 0.4),
+    0 0 0 0 rgba(102, 126, 234, 0.7);
   border: none;
   border-radius: 50%;
   cursor: pointer;
   font-size: 50px;
   position: fixed;
-  bottom: 24px;
-  right: 24px;
+  bottom: var(--spacing-lg);
+  right: var(--spacing-lg);
   font-weight: bold;
-  color: #FAFAFA;
+  color: var(--text-primary);
   display: flex;
   justify-content: center;
   align-items: center;
   height: 64px;
   width: 64px;
-  z-index: 1;
-
-  transform: rotate(0);
-  transition: .3s ease;
+  z-index: 1000;
+  transform: rotate(0) scale(1);
+  transition: all var(--transition-normal);
+  animation: fadeInScale 0.6s ease 0.4s backwards, subtlePulse 3s ease-in-out infinite;
 }
 
 .CreateTodoButton:hover {
-  transform: rotate(224deg);
+  transform: rotate(90deg) scale(1.1);
+  box-shadow: 
+    0 12px 48px rgba(102, 126, 234, 0.6),
+    0 0 0 8px rgba(102, 126, 234, 0.2);
+}
+
+.CreateTodoButton:active {
+  transform: rotate(90deg) scale(0.95);
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0) rotate(180deg);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) rotate(0);
+  }
+}
+
+@keyframes subtlePulse {
+  0%, 100% {
+    box-shadow: 
+      0 8px 32px rgba(102, 126, 234, 0.4),
+      0 0 0 0 rgba(102, 126, 234, 0.7);
+  }
+  50% {
+    box-shadow: 
+      0 8px 32px rgba(102, 126, 234, 0.4),
+      0 0 0 12px rgba(102, 126, 234, 0);
+  }
 }
