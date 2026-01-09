@@ -1,75 +1,150 @@
-# Repositorio base del Curso de Introducción a React.js en Platzi
+# 📋 Todo Machine - React Todo App
 
-¡Hola, Platzinauta!
+Una aplicación moderna y funcional de gestión de tareas (Todo App) construida con **React.js**, desarrollada como parte del [Curso de Introducción a React.js](https://platzi.com/reactjs) de Platzi.
 
-En este repositorio encontrarás el código de todas las clases del [Curso de Introducción a React.js](https://platzi.com/reactjs). Para empezar solo debes clonar este repositorio (`git clone`), instalar sus dependencias (`npm i`) y ejecutar la aplicación (`npm start`).
+## 🚀 Demo en Vivo
 
-La rama principal contiene el código con el que eempezamos el curso. En las demás ramas encontrarás el código de las siguientes clases y finalmente el deploy de la aplicación.
+📱 **Accede a la aplicación aquí:** [https://devzuela.github.io/react-todo-machine/](https://devzuela.github.io/react-todo-machine/)
 
-¡Mucha suerte aprendiendo React! #NuncaParesDeAprender
+## ✨ Características
 
-## Getting Started with Create React App
+- ✅ Crear, editar y eliminar tareas
+- 🔍 Buscar tareas por texto
+- ☑️ Marcar tareas como completadas
+- 📊 Contador de tareas completadas y pendientes
+- 🎨 Interfaz moderna y responsiva
+- 💾 Almacenamiento persistente con Local Storage
+- 🌓 Diseño profesional y limpio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 🛠️ Tecnologías Utilizadas
 
-## Available Scripts
+### React Hooks & Features
+- **`useState`** - Manejo de estado en componentes funcionales
+- **`useEffect`** - Efectos secundarios y ciclo de vida
+- **`useContext`** - Context API para estado global
+- **`useLocalStorage`** - Hook personalizado para persistencia de datos
 
-In the project directory, you can run:
+### Tecnologías
+- **React 18** - Biblioteca de UI
+- **React Hooks** - Lógica de componentes modernos
+- **CSS3** - Estilos personalizados y responsive
+- **Local Storage API** - Persistencia de datos
+- **Create React App** - Herramienta de configuración
+
+## 🏃 Primeros Pasos
+
+### Requisitos previos
+- Node.js (versión 14 o superior)
+- npm o yarn
+
+### Instalación
+
+```bash
+# Clonar el repositorio
+git clone https://github.com/devzuela/react-todo-machine.git
+cd react-todo-machine
+
+# Instalar dependencias
+npm install
+```
+
+### Desarrollo
+
+```bash
+# Inicia la aplicación en modo desarrollo
+npm start
+```
+
+La aplicación se abrirá en [http://localhost:3000/todo-machine](http://localhost:3000/todo-machine) en tu navegador.
+
+## 📦 Scripts Disponibles
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000/todo-machine](http://localhost:3000/todo-machine) to view it in your browser.
+Ejecuta la aplicación en modo desarrollo.\
+Abre [http://localhost:3000/todo-machine](http://localhost:3000/todo-machine) para verla en tu navegador.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+La página se recargará cuando hagas cambios.\
+También verás errores de linting en la consola.
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Compila la aplicación para producción en la carpeta `build`.\
+Hace bundling correcto de React en modo producción y optimiza el build para el mejor rendimiento.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+El build está minificado y los nombres de archivos incluyen hashes.\
+¡Tu app está lista para ser deployada!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### `npm run deploy`
 
-### `npm run eject`
+Publica la aplicación en GitHub Pages automáticamente.\
+Requiere tener configuradas las credenciales de GitHub.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+npm run deploy
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 📂 Estructura del Proyecto
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```
+src/
+├── App/                      # Componente principal de la aplicación
+├── CreateTodoButton/         # Botón para crear nuevas tareas
+├── EmptyTodos/              # Mensaje cuando no hay tareas
+├── Modal/                   # Modal para crear/editar tareas
+├── TodoContext/             # Context API y hooks personalizados
+│   ├── index.js            # Proveedor de contexto
+│   └── useLocalStorage.js   # Hook para persistencia de datos
+├── TodoCounter/             # Contador de tareas completadas/pendientes
+├── TodoForm/                # Formulario para crear tareas
+├── TodoIcon/                # Iconos de las tareas (completar, eliminar)
+├── TodoItem/                # Item individual de una tarea
+├── TodoList/                # Lista de tareas
+├── TodoSearch/              # Buscador de tareas
+├── TodosError/              # Componente de error
+├── TodosLoading/            # Componente de carga
+└── index.js                 # Punto de entrada
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 🎓 Conceptos de React Aprendidos
 
-## Learn More
+### React Hooks
+- **useState**: Manejo de estado en componentes funcionales
+- **useEffect**: Efectos secundarios (fetch, suscripciones, etc.)
+- **useContext**: Consumo de Context API para estado global
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Patrones
+- **Componentes Funcionales**: Uso de functional components
+- **Props**: Paso de datos entre componentes
+- **Lifting State Up**: Elevar estado a componentes padres
+- **Context API**: Manejo de estado global sin prop drilling
+- **Custom Hooks**: Creación de hooks personalizados
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🔧 Configuración de Despliegue
 
-### Code Splitting
+La aplicación está configurada para desplegarse en GitHub Pages. El `homepage` en `package.json` apunta a:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```json
+"homepage": "https://devzuela.github.io/react-todo-machine/"
+```
 
-### Analyzing the Bundle Size
+## 📝 Notas
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- La aplicación usa **Local Storage** para persistir los datos, por lo que las tareas se guardan localmente en tu navegador
+- Los estilos están optimizados para ser responsivos y funcionar en dispositivos móviles
+- Todos los componentes son reutilizables y modulares
 
-### Making a Progressive Web App
+## 📚 Recursos
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- [React Documentation](https://reactjs.org/)
+- [React Hooks Documentation](https://reactjs.org/docs/hooks-intro.html)
+- [Create React App Documentation](https://create-react-app.dev/)
+- [Platzi - Curso de Introducción a React.js](https://platzi.com/reactjs/)
 
-### Advanced Configuration
+## 👨‍💻 Autor
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Desarrollado durante el Curso de Introducción a React.js de Platzi
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+¡Mucha suerte aprendiendo React! #NuncaParesDeAprender
